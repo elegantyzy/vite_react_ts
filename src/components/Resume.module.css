@@ -1,0 +1,114 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.basicInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 2rem;
+  object-fit: cover;
+}
+
+.info h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: #2d3748;
+}
+
+.info h2 {
+  font-size: 1.5rem;
+  color: #4a5568;
+  margin: 0.5rem 0;
+}
+
+.contact {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.contact p {
+  margin: 0.25rem 0;
+}
+
+.experience {
+  margin-bottom: 3rem;
+}
+
+.experienceItem {
+  background: white;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.experienceItem h3 {
+  margin: 0;
+  color: #2d3748;
+}
+
+.experienceItem h4 {
+  margin: 0.5rem 0;
+  color: #4a5568;
+}
+
+.period {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.description {
+  overflow: hidden;
+  color: #4a5568;
+  margin-top: 1rem;
+}
+
+.skills {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.skillTag {
+  background: #edf2f7;
+  color: #4a5568;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .basicInfo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .avatar {
+    margin: 0 0 1rem 0;
+  }
+} 
