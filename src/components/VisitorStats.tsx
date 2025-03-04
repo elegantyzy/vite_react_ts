@@ -161,12 +161,11 @@ const VisitorStats: React.FC = () => {
   // 获取总访问量
   const calculateTotalVisitors = (): number => {
     const visitors: VisitorStats = JSON.parse(localStorage.getItem('visitorStats') || '{}');
-    return Object.values(visitors).reduce((sum, count) => sum + count, 0);
+    return Object.values(visitors).reduce((sum, count) => sum + count, 1);
   };
 
   // 获取时段分布
   const getTimeDistribution = (): TimeDistribution => {
-    const visitors: VisitorStats = JSON.parse(localStorage.getItem('visitorStats') || '{}');
     const currentHour = new Date().getHours();
     
     // 从 localStorage 获取时段分布数据
