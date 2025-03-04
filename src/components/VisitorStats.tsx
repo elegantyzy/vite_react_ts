@@ -29,7 +29,7 @@ const VisitorStats: React.FC = () => {
   const [chart1, setChart1] = useState<echarts.ECharts | null>(null);
   const [chart2, setChart2] = useState<echarts.ECharts | null>(null);
   const [chart3, setChart3] = useState<echarts.ECharts | null>(null);
-  const [totalVisitors, setTotalVisitors] = useState<number>(0);
+  const [totalVisitors, setTotalVisitors] = useState<number>(1);
 
   // 生成访客唯一ID
   const generateVisitorId = (): string => {
@@ -161,7 +161,7 @@ const VisitorStats: React.FC = () => {
   // 获取总访问量
   const calculateTotalVisitors = (): number => {
     const visitors: VisitorStats = JSON.parse(localStorage.getItem('visitorStats') || '{}');
-    return Object.values(visitors).reduce((sum, count) => sum + count, 1);
+    return Object.values(visitors).reduce((sum, count) => sum + count, 0);
   };
 
   // 获取时段分布
